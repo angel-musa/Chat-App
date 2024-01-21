@@ -14,7 +14,9 @@ app.post("/authenticate", async (req, res) => { // takes a username from request
     const r = await axios.put(
         'https://api.chatengine.io/users/',  // getting the user in chatengine if they exist else creating it
         {username: username, secret: username, first_name: username}, // user's name has been specified and using that value for their secret and firstanme
-        {headers: {"private-key": "5a655540-b778-48ba-ba74-f4cd5726e2a1"}} // using project private key - allows to create/destroy users
+        {headers: {"private-key": " 
+              // insert private key here 
+          "}} // using project private key - allows to create/destroy users
     )
     return res.status(r.status).json(r.data); // return data
   }catch(e) {
